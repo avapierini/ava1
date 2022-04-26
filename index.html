@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Little Bird TOYS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #b8a0a0;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #da4b20;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #db4112;
+    font-size: 50px;
+  }
+  .logo {
+    color: #d84818;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #d14c23;
+  }
+  .carousel-indicators li {
+    border-color: #db4113;
+  }
+  .carousel-indicators li.active {
+    background-color: #d83b0b;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #c25635; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: rgb(226, 192, 148) !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: rgb(228, 139, 24) !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #f4511e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#services">TOYS</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About our compamy!<br>
+      <h4>Our handcrafted classic, wooden toys  are designed to bring out that slowness in your home. From Planes, trains, automobiles and boats, playsets, all of our wooden toys are designed to spark imagination. The going may be a little slower, but oh the things you’ll see along the way!
+        Since 2018, Little Bird Toys has delighted families looking for quality children’s toys.  Our collection of heirloom quality products are built to stand the test of time and to be enjoyed from sibling to sibling and generation to generation.
+        .</h4><br>
+      <p>Wood is an important part of who we are.  Early on we chose wood for its inherently durable qualities with the intention of making toys and furniture that could withstand the test of time – and stay out of the landfill.
+        Our wooden toys are designed to withstand the wear of play and to be safely enjoyed from generation to generation.
+        Our process of sourcing, manufacturing, and shipping only within the U.S. allows us to support our national economy and reduce the often-hefty carbon emissions that come with international trade and shipping.
+        </p>
+    
+    </div>
+    <div class="col-sm-4">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMLUX72CnEg__ek-DIAPph3SEhK4_CIBa7VnNjttat4wy9Lbsp434_cczC-sUkgKcxVW3SQiO_OcKF7BwRN4hepkGjv00Do8LCebersI7wQ8ZNAsiBALWkYbL9wLvpBDpDvl-GosRpXf3-JBia-bIMBWZJsv566Wud46QosyN35wTvix7tyndlZrRf/s320/Little%20Bird%20Toys%20Logo%20(1).png">
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-8">
+      <h2></h2><br>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEihTOBcs7ZCuDzi5nRRMZBtlgPIKKKPjRc72jorKFKTsp4ByWGHE75EovFf1wSjf7P--GKTEKdqZxACXbGdWnbaJ8VJ5rwMrZhKPdk3syFPV1KMmR6NIzt2cVrK5wmq56MJE-G2w4MumENaV-IMB7U6T1NAwIYSbZN4k2STK_jjogCizdtzP1vO_FIk/s320/block3.jpg">
+  
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuG_vZc2m7BI_uR3BNQeCQUv_0UP0pd1uwt47z5vkfcXYVsa8daTl2lPVU5oW7rTobEzTulMdJ6EvLJy-4bqJB_NiMsADT5Hkjm6s9ci9UYepTfLsNfMzEGC09iZfz7BET_I1Pkptr3uByaz8VYBOavjggApX7DCeXc2GH5RhmWjLL9d7IJIPkI6nJ/s320/block1.jpg">
+ 
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiE3DaPPjUB-tBqVsTKctd7_7CNb0w5faIKvU3w7jfddkZdapUWTFc6jLZIck_cZpYUa6095Vn_I1gHvmusOJGvfOCQhXbtCAhNguFlkMs181oDBBNT1lNLx3bBztZ1fWSXyMK6wnSxstPMTM-Z0Av9t-7Ha6QGddxrBV8vqElBRmI9k94J7V9NIb2B/s320/block4.jpg">
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>TOYS</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+    
+   
+     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhxZMiNSSk1ncoEhj9CgCdD4dgwQy81BR4k03-UpfVfFzJRqUtAmBCSgWpU4-tPj8JK-H9GWBIbP_-BboCeTyj1VULrkje8_QBV6gBJ1Dj136jH8hyscB0qAlvPbGxiJmxDem0kbE2Nc6ibKJqzH7PiBGZ7JRdYY01k9MFfS786O94LTCCfPtGA3x-i/s320/plane2.jpg">
+      <p> Wooden toy airplane</p>
+     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiW_Sy75b_Sgrxj36nzKuNa-LU32ic8qReS9qUZHfLld-_gTkpXfUM66Z_DokGE648XJAKpRIR-zP5YBVoUemIIt_tIWcXlz9sFLk_T0LhIzsWEKTmHmWljlIM5G19tp5E_8QZSzS6v5V6uZUqpIX63RVh7iH9grespE_pVKUR5ex3D_-8_8ZYKOPSa/s320/block2.jpg">
+     <p> Wooden toy block set</p>   
+ 
+    </div>
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4uvgdEnx9IovYsEpER5-SbVYW1ad96ZHpf-5h-9B97CBRRzNhMX8RhPKNB67YvY3rvQLLuB9KEpwxSOjoPZTYGDmWKOEwyM1awh7kP60S3Ahx7-DKIIPkWXR4opFFUl-wwUMsDYNH7SOxLDzwPLwhvnl522eZRTU9vagf0EEWNl1PsAGRFSq4w3CL/s320/car3.jpg">
+    <p> Wooden Toy Car</p>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWGNOuk1DsWgtU2zO-bn867KnoQuU73AqU_9OAGPSh0V0bX5R2g7sRPo9c__WBe1KMm6S_PiW-kWATX3J_ny92IFQGBOU25EdvR_lDglUisrwW6Tq5_120q4Z5BKMRY4572rXkEq3RCOCM4sAzudOgufSpK9DVWk3osFOaQJa0ElrTLRxV4BqrObkw/s320/Screenshot%202022-04-01%208.56.27%20AM.png">
+<p> Wooden toy Train</p>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLhaGJmpXCI1n0mVUc-ISAM1MS50-Z1Bt8wP9rqjUKJdnaFWRZyfViKM1L5m0DX5RXLfXIQk8B-Y4qrboBIpcptKDkGYVCamlF0oK6VHasU9skBaUUe68AdYwUAgObFkHnNfyvbcdl3WA7CWEi9zMV__WyJCf5XRqUFmCYynOcp3iaFTvfM89hoiWF/s320/boat2.jpg">
+<p> Little Toy Boat</p>
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<p><strong>Wooden Toy Airplane</strong>
+   Defying gravity and soaring in the sky is every boys dream. Keep him dreaming big with this classic wooden airplane made by us, here at Little Bird Toys in Bound Brook, NJ. 
+  The airplane comes ready to fly with a kid-safe Natural Harvest Finish and a propeller that spins. 
+  The dimensions of the Airplane is approximately 3.5"H x 7"L x 7"W .
+  The Airplane Comes with Real Rolling Wheels and Spinning Propellers.
+  Made out of Solid Wood - Built to Last for a Lifetime of Play.
+  Perfect Creative Gift for Toddlers.</p>
+  Safe for Young Kids - Comes with a Non-Toxic Finish!
+  <p><strong>Wooden Toy Train</strong>
+  A beautiful handmade wooden train set - Engine and three interchangeable cars Handmade detailed artwork made of real beech wood. 
+  Wonderful Christmas gift! Large size - 84 cm length, 11 height and 13 width Moving wheel mechanism. 
+  Fully ecological product, only natural materials. High quality and durable. 
+  Suitable for children from 3 years old Lots of fun guaranteed at any age! 
+  This set can be painted using wood paint. 
+  Theses toys are #timeless and can be passed down for generations to come. 
+  Please note that these toys have small parts that could break off if used inappropriately.</p>
+ <p><strong> Wooden Toy Boat</strong>
+  On the coast of Maine, "Lobstah" boats like this one are a common sight. 
+  This new wooden toy model really floats and makes a great bath toy.  
+  The safe and simple design encourages a child to use his or her own imagination.   Batteries not required!
+   Handcrafted in Maine with soft and rounded corners and edges to nourish a child's senses and to be safe for toddlers.   
+  Built of solid Maine white pine and sturdy enough to withstand years of use before being passed down to the next generation. 
+  Boat comes with two peg lobster- people.
+  SIZE : 10.5"W x 3.5"H
+  MATERIAL : Solid White Pine</p>
+  <strong><p>Wooden Block Toy Set</strong>
+  High-Grade Quality: Hardwood blocks are sturdy, solid and safe for kids. 
+  72 naturally finished and smooth-sanded hardwood blocks. Case size is 13” L x 12” W x 2” H. 
+  Packaged in a handsome, wooden storage crate for easy storage. 
+  Suitable for children ages 3 and up. 
+  Highly durable set for indoor or outdoor use including: lawns, patios, living rooms, preschools, kindergartens & anywhere else. 
+  Make your own dream castle anywhere.  Block play helps promote creativity, independent play, cooperative play, fine motor skills and hand-eye coordination. 
+  When building, children must consider proportions, symmetry, size and more, which benefit early cultivation of concepts. 
+  This product is conducive to your child's imagination, allowing various kinds of combinations to be built</p>
+  <p><strong>Wooden Toy Car</strong>
+  Beautifully handcrafted wooden car. One-of-a-kind - (the photos included for this item may not be the actual car that you will receive. 
+  All cars are the same size and construction).   
+  Great toy that will inspire imaginative and active play. This car will be in your family for generations to come - think heirloom or keepsake.  
+  Handcrafted from a variety of domestic and exotic hardwoods including maple, oak, mahogany, cherry woods, etc., coated with clear lacquer to enhance and hold the natural wood color. All edges are rounded over and sanded for a silky smooth finish.  
+  Please be aware there may be choking hazards with small children. Toys have a few small parts that may break with excessive rough or improper use.</p>
+  </div>
+  </div>
+</div>
+</body>
+</html>
+
+ 
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>Pricing</h2>
+    <h4>See Our toy prices</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>The Wooden Toy Block set</h1>
+        </div>
+        <div class="panel-body">
+        <p> Buy 1 for $40
+          <P>and buy 1 get one half off!</P>
+        </p>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+        ><h1>Wooden Toy Boat/ Wooden Toy Car</h1>
+        </div>
+        <div class="panel-body">
+  <P> Both are $13 per toy, buy 2 get one free!</P>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+         <strong> <h1>Wooden toy train/Wooden Toy Boat</h1></strong>
+        </div>
+       <p> Buy 1 for $25 or buy 2 for $40</p>
+        </div>
+  
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> 43 Main St, Toms River, NJ 08753</p>
+      <p><span class="glyphicon glyphicon-phone"></span> (717) 123-1234</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Store Hours
+        WEEKDAYS
+        7:00 AM to 4:30 PM
+        SATURDAY
+        10:00 AM to 2:00 PM
+        All socials (FB, Insta, Twitter, Snapchat)
+         @LittleBirdToyCo
+        </p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
